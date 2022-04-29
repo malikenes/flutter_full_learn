@@ -9,6 +9,7 @@ import 'package:flutter_full_learn/101/padding_learn.dart';
 import 'package:flutter_full_learn/101/scaffold_learn.dart';
 import 'package:flutter_full_learn/101/stateless_learn.dart';
 import 'package:flutter_full_learn/101/text_learn.dart';
+import 'package:flutter_full_learn/demos/note_demos_app.dart';
 
 import '101/button_learn.dart';
 import '101/container_sized_box_learn.dart';
@@ -31,6 +32,6 @@ class MyApp extends StatelessWidget {
                 // systemOverlayStyle: SystemUiOverlayStyle.light,
                 backgroundColor: Colors.transparent,
                 elevation: 0)),
-        home: ImageLeranView());
+        home: NoteDemos());
   }
 }
