@@ -3,13 +3,19 @@ import 'package:flutter/services.dart';
 import 'package:flutter_full_learn/101/appbar_learn.dart';
 import 'package:flutter_full_learn/101/card_learn.dart';
 import 'package:flutter_full_learn/101/color_learn.dart';
+import 'package:flutter_full_learn/101/column_row_learn.dart';
+import 'package:flutter_full_learn/101/custom_widget_learn.dart';
 import 'package:flutter_full_learn/101/icon_learn.dart';
 import 'package:flutter_full_learn/101/image_learn.dart';
+import 'package:flutter_full_learn/101/indicator_learn.dart';
+import 'package:flutter_full_learn/101/list_tile_learn.dart';
 import 'package:flutter_full_learn/101/padding_learn.dart';
 import 'package:flutter_full_learn/101/scaffold_learn.dart';
+import 'package:flutter_full_learn/101/stack_learn.dart';
 import 'package:flutter_full_learn/101/stateless_learn.dart';
 import 'package:flutter_full_learn/101/text_learn.dart';
 import 'package:flutter_full_learn/demos/note_demos_app.dart';
+import 'package:flutter_full_learn/demos/stack_learn_demos.dart';
 
 import '101/button_learn.dart';
 import '101/container_sized_box_learn.dart';
@@ -27,11 +33,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData.dark().copyWith(
+            progressIndicatorTheme: ProgressIndicatorThemeData(
+              color: Colors.white,
+            ),
             appBarTheme: AppBarTheme(
                 centerTitle: true,
                 // systemOverlayStyle: SystemUiOverlayStyle.light,
                 backgroundColor: Colors.transparent,
                 elevation: 0)),
-        home: NoteDemos());
+        home: StackLearnDemos());
   }
 }
