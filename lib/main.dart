@@ -10,10 +10,14 @@ import 'package:flutter_full_learn/101/image_learn.dart';
 import 'package:flutter_full_learn/101/indicator_learn.dart';
 import 'package:flutter_full_learn/101/list_tile_learn.dart';
 import 'package:flutter_full_learn/101/padding_learn.dart';
+import 'package:flutter_full_learn/101/pageview_learn.dart';
 import 'package:flutter_full_learn/101/scaffold_learn.dart';
 import 'package:flutter_full_learn/101/stack_learn.dart';
+import 'package:flutter_full_learn/101/stateful_learn.dart';
+import 'package:flutter_full_learn/101/stateful_lifecycle_learn.dart';
 import 'package:flutter_full_learn/101/stateless_learn.dart';
 import 'package:flutter_full_learn/101/text_learn.dart';
+import 'package:flutter_full_learn/101/textfield_learn.dart';
 import 'package:flutter_full_learn/demos/note_demos_app.dart';
 import 'package:flutter_full_learn/demos/stack_learn_demos.dart';
 
@@ -36,11 +40,21 @@ class MyApp extends StatelessWidget {
             progressIndicatorTheme: ProgressIndicatorThemeData(
               color: Colors.white,
             ),
+            listTileTheme: ListTileThemeData(contentPadding: EdgeInsets.zero),
+            cardTheme:
+                CardTheme(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))),
+            inputDecorationTheme: InputDecorationTheme(
+              filled: true,
+              fillColor: Colors.transparent,
+              border: OutlineInputBorder(),
+              labelStyle: TextStyle(fontSize: 24),
+            ),
             appBarTheme: AppBarTheme(
                 centerTitle: true,
+
                 // systemOverlayStyle: SystemUiOverlayStyle.light,
                 backgroundColor: Colors.transparent,
                 elevation: 0)),
-        home: StackLearnDemos());
+        home: TextfieldLearn());
   }
 }
