@@ -9,6 +9,9 @@ import 'package:flutter_full_learn/101/icon_learn.dart';
 import 'package:flutter_full_learn/101/image_learn.dart';
 import 'package:flutter_full_learn/101/indicator_learn.dart';
 import 'package:flutter_full_learn/101/list_tile_learn.dart';
+import 'package:flutter_full_learn/101/list_view_learn.dart';
+import 'package:flutter_full_learn/101/listview_builder_learn.dart';
+import 'package:flutter_full_learn/101/navigation_learn.dart';
 import 'package:flutter_full_learn/101/padding_learn.dart';
 import 'package:flutter_full_learn/101/pageview_learn.dart';
 import 'package:flutter_full_learn/101/scaffold_learn.dart';
@@ -18,6 +21,9 @@ import 'package:flutter_full_learn/101/stateful_lifecycle_learn.dart';
 import 'package:flutter_full_learn/101/stateless_learn.dart';
 import 'package:flutter_full_learn/101/text_learn.dart';
 import 'package:flutter_full_learn/101/textfield_learn.dart';
+import 'package:flutter_full_learn/demos/colors_demos_lifecycle.dart';
+import 'package:flutter_full_learn/demos/colors_demos_view.dart';
+import 'package:flutter_full_learn/demos/my_collection_demos.dart';
 import 'package:flutter_full_learn/demos/note_demos_app.dart';
 import 'package:flutter_full_learn/demos/stack_learn_demos.dart';
 
@@ -55,6 +61,6 @@ class MyApp extends StatelessWidget {
                 // systemOverlayStyle: SystemUiOverlayStyle.light,
                 backgroundColor: Colors.transparent,
                 elevation: 0)),
-        home: TextfieldLearn());
+        home: NavigationLearn());
   }
 }
