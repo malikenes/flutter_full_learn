@@ -21,6 +21,7 @@ import 'package:flutter_full_learn/101/stateful_lifecycle_learn.dart';
 import 'package:flutter_full_learn/101/stateless_learn.dart';
 import 'package:flutter_full_learn/101/text_learn.dart';
 import 'package:flutter_full_learn/101/textfield_learn.dart';
+import 'package:flutter_full_learn/202/tab_learn.dart';
 import 'package:flutter_full_learn/demos/colors_demos_lifecycle.dart';
 import 'package:flutter_full_learn/demos/colors_demos_view.dart';
 import 'package:flutter_full_learn/demos/my_collection_demos.dart';
@@ -43,6 +44,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData.dark().copyWith(
+            tabBarTheme: TabBarTheme(
+              unselectedLabelColor: Colors.grey,
+              indicatorSize: TabBarIndicatorSize.label,
+            ),
             progressIndicatorTheme: ProgressIndicatorThemeData(
               color: Colors.white,
             ),
@@ -61,6 +66,6 @@ class MyApp extends StatelessWidget {
                 // systemOverlayStyle: SystemUiOverlayStyle.light,
                 backgroundColor: Colors.transparent,
                 elevation: 0)),
-        home: NavigationLearn());
+        home: TabLearn());
   }
 }
