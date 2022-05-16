@@ -31,6 +31,10 @@ import 'package:flutter_full_learn/demos/stack_learn_demos.dart';
 
 import '101/button_learn.dart';
 import '101/container_sized_box_learn.dart';
+import '202/animated_learn.dart';
+import '202/form_learn_view.dart';
+import '202/image_learn_202.dart';
+import '202/oop_learn_view.dart';
 import '202/package_learn_view.dart';
 import '202/services/service_learn_view.dart';
 import '202/services/service_post_learn.dart';
@@ -77,6 +81,6 @@ class MyApp extends StatelessWidget {
         //         // systemOverlayStyle: SystemUiOverlayStyle.light,
         //         backgroundColor: Colors.transparent,
         //         elevation: 0)),
-        home: const WidgetSizeEnumLearn());
+        home: const FormLearnView());
   }
 }
