@@ -21,6 +21,8 @@ import 'package:flutter_full_learn/101/stateful_lifecycle_learn.dart';
 import 'package:flutter_full_learn/101/stateless_learn.dart';
 import 'package:flutter_full_learn/101/text_learn.dart';
 import 'package:flutter_full_learn/101/textfield_learn.dart';
+import 'package:flutter_full_learn/202/cache/secure_context/secure_context_learn.dart';
+import 'package:flutter_full_learn/202/cache/shared_learn_cache.dart';
 import 'package:flutter_full_learn/202/tab_learn.dart';
 import 'package:flutter_full_learn/202/tema/light_tema.dart';
 import 'package:flutter_full_learn/demos/colors_demos_lifecycle.dart';
@@ -81,6 +83,6 @@ class MyApp extends StatelessWidget {
         //         // systemOverlayStyle: SystemUiOverlayStyle.light,
         //         backgroundColor: Colors.transparent,
         //         elevation: 0)),
-        home: const FormLearnView());
+        home: const ShareContextLearn());
   }
 }

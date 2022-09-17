@@ -11,12 +11,14 @@ class TabLearn extends StatefulWidget {
   State<TabLearn> createState() => _TabLearnState();
 }
 
-class _TabLearnState extends State<TabLearn> with TickerProviderStateMixin {
+class _TabLearnState extends State<TabLearn>
+    with TickerProviderStateMixin {
   late final TabController _controller;
   @override
   void initState() {
     super.initState();
-    _controller = TabController(length: _MyTabView.values.length, vsync: this);
+    _controller =
+        TabController(length: _MyTabView.values.length, vsync: this);
   }
 
   @override
@@ -31,7 +33,8 @@ class _TabLearnState extends State<TabLearn> with TickerProviderStateMixin {
             _controller.animateTo(_MyTabView.Home.index);
           },
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        floatingActionButtonLocation:
+            FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: BottomAppBar(
           notchMargin: notchMargin,
           shape: CircularNotchedRectangle(),
@@ -54,14 +57,21 @@ class _TabLearnState extends State<TabLearn> with TickerProviderStateMixin {
         labelColor: Colors.amber,
         indicatorColor: Colors.red,
         controller: _controller,
-        tabs: _MyTabView.values.map((e) => Tab(text: "${e.name}")).toList());
+        tabs: _MyTabView.values
+            .map((e) => Tab(text: "${e.name}"))
+            .toList());
   }
 
   TabBarView _myTabbarView() {
     return TabBarView(
       physics: NeverScrollableScrollPhysics(),
       controller: _controller,
-      children: [AppbarLearnView(), ButtonLearnView(), CardLearnView(), ImageLeranView()],
+      children: [
+        AppbarLearnView(),
+        ButtonLearnView(),
+        CardLearnView(),
+        ImageLeranView()
+      ],
     );
   }
 }
