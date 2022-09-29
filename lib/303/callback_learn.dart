@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_full_learn/product/navigate/navigate_router.dart';
 import 'package:flutter_full_learn/product/widget/button/answer_button.dart';
 import 'package:flutter_full_learn/product/widget/button/loading_button.dart';
 import 'package:flutter_full_learn/product/widget/callback_dropdown.dart';
@@ -28,13 +29,23 @@ class CallbackUser {
   static List<CallbackUser> dummyUsers() {
     return [CallbackUser('emk', 123), CallbackUser('emk2', 1234)];
   }
-
-  @override
-  // TODO: implement hashCode
-  int get hashCode => super.hashCode;
 }
 
 class _CallbackLearnState extends State<CallbackLearn> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    navigateToHome();
+  }
+
+  Future<void> navigateToHome() async {
+    await Future.delayed(const Duration(seconds: 1));
+    Navigator.of(context).pushNamed(
+      NavigateRoutes.home.withParaf,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

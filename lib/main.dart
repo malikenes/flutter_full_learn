@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_full_learn/202/tema/light_tema.dart';
 import 'package:flutter_full_learn/303/callback_learn.dart';
+import 'package:flutter_full_learn/product/navigate/navigate_custom.dart';
+import 'package:flutter_full_learn/product/navigate/navigator_manager.dart';
+
+import '303/mobx_image_picker/view/mox_image_upload_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -43,6 +47,16 @@ class MyApp extends StatelessWidget {
         //         // systemOverlayStyle: SystemUiOverlayStyle.light,
         //         backgroundColor: Colors.transparent,
         //         elevation: 0)),
-        home: const CallbackLearn());
+        //routes: NavigateRouters().items,
+        onUnknownRoute: (settings) {
+          return MaterialPageRoute(
+            builder: (context) {
+              return const CallbackLearn();
+            },
+          );
+        },
+        onGenerateRoute: NavigatorCustom().onGenerate,
+        navigatorKey: NavigatorManager.instance.navigatorGlobalKey,
+        home: const MobxImageUpload());
   }
 }
