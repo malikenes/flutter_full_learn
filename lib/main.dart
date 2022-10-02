@@ -4,7 +4,7 @@ import 'package:flutter_full_learn/303/callback_learn.dart';
 import 'package:flutter_full_learn/product/navigate/navigate_custom.dart';
 import 'package:flutter_full_learn/product/navigate/navigator_manager.dart';
 
-import '303/mobx_image_picker/view/mox_image_upload_view.dart';
+import '303/package/kartal/kartal_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -57,6 +57,6 @@ class MyApp extends StatelessWidget {
         },
         onGenerateRoute: NavigatorCustom().onGenerate,
         navigatorKey: NavigatorManager.instance.navigatorGlobalKey,
-        home: const MobxImageUpload());
+        home: const KartalView());
   }
 }

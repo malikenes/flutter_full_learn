@@ -46,6 +46,9 @@ dependencies:
 
   json_serializable: ^6.4.0
 
+  #context
+  kartal: ^2.4.3
+
 
   #States
   flutter_mobx: ^2.0.4
