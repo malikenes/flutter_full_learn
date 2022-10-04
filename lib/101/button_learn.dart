@@ -11,7 +11,7 @@ class ButtonLearnView extends StatelessWidget {
         children: [
           TextButton(
             onPressed: () {},
-            child: Text("Text"),
+            child: const Text("Text"),
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.resolveWith(
                 (states) {
@@ -23,20 +23,23 @@ class ButtonLearnView extends StatelessWidget {
               ),
             ),
           ),
-          ElevatedButton(onPressed: null, child: Text("Elevated")),
-          IconButton(onPressed: () {}, icon: Icon(Icons.abc_outlined)),
+          const ElevatedButton(
+              onPressed: null, child: Text("Elevated")),
+          IconButton(
+              onPressed: () {}, icon: const Icon(Icons.abc_outlined)),
           FloatingActionButton(
             onPressed: () {},
-            child: Icon(Icons.abc_rounded),
+            child: const Icon(Icons.abc_rounded),
           ),
           OutlinedButton(
             onPressed: () {},
-            child: Text("Outlined"),
-            style: OutlinedButton.styleFrom(backgroundColor: Colors.blue),
+            child: const Text("Outlined"),
+            style: OutlinedButton.styleFrom(
+                backgroundColor: Colors.blue),
           ),
           InkWell(
             onTap: () {},
-            child: Text("Inkwell"),
+            child: const Text("Inkwell"),
           ),
           Container(
             height: 100,
@@ -49,7 +52,7 @@ class ButtonLearnView extends StatelessWidget {
               style: Theme.of(context).textTheme.headline5,
             ),
             style: ElevatedButton.styleFrom(
-                primary: Colors.green,
+                backgroundColor: Colors.green,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10))),
           ),

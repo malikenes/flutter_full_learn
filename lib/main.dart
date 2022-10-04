@@ -4,7 +4,7 @@ import 'package:flutter_full_learn/303/callback_learn.dart';
 import 'package:flutter_full_learn/product/navigate/navigate_custom.dart';
 import 'package:flutter_full_learn/product/navigate/navigator_manager.dart';
 
-import '303/package/kartal/kartal_view.dart';
+import '404/compute_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,6 +19,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Flutter Demo',
         theme: LightTheme().thme,
+        builder: (context, child) {
+          return MediaQuery(
+              data:
+                  MediaQuery.of(context).copyWith(textScaleFactor: 1),
+              child: child ?? const SizedBox());
+        },
         // theme: ThemeData.dark().copyWith(
         //     // ignore: prefer_const_constructors
         //     tabBarTheme: TabBarTheme(
@@ -57,6 +63,6 @@ class MyApp extends StatelessWidget {
         },
         onGenerateRoute: NavigatorCustom().onGenerate,
         navigatorKey: NavigatorManager.instance.navigatorGlobalKey,
-        home: const KartalView());
+        home: const ComputeLearn());
   }
 }
